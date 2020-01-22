@@ -96,8 +96,19 @@ class MainWindow(QWidget):
         if znak == "4":
             self.close()
         if znak == "1":
+            print(1)
+            con = sqlite3.connect("levelcarts.db")
+            cur = con.cursor()
+            i = cur.execute("Select name from cartslevels WHERE id=?", (1,)).fetchall()
+            cur.execute("UPDATE cartslevels SET level = ? WHERE name = ?", (1, i), ).fetchall()
+            con.commit()
+            con.close()
             self.close()
             os.system('python viborcarts.py')
+        if znak == "2":
+            self.close()
+            os.system('python viborcarts.py')
+
 
 
 class Info(QWidget):

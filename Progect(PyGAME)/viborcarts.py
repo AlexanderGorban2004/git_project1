@@ -17,7 +17,31 @@ b = b[0][0]
 
 max = 6
 if b == 1:
-    pict = ["CVET.png", "NORMAL.png", "IAGODA.png", "POTATO.png", "KUSHA.png"]
+    pict = ["NORMAL.png", "POTATO.png", "IAGODA.png", "scoro.png", "KUSHA.png"]
+    max = 5
+if b == 2:
+    pict = ["NORMAL.png", "POTATO.png", "IAGODA.png", "scoro.png", "KUSHA.png"]
+    max = 5
+if b == 3:
+    pict = ["NORMAL.png", "POTATO.png", "IAGODA.png", "scoro.png", "KUSHA.png"]
+    max = 5
+if b == 4:
+    pict = ["NORMAL.png", "POTATO.png", "IAGODA.png", "scoro.png", "KUSHA.png"]
+    max = 5
+if b == 5:
+    pict = ["NORMAL.png", "POTATO.png", "IAGODA.png", "scoro.png", "KUSHA.png"]
+    max = 5
+if b == 6:
+    pict = ["NORMAL.png", "POTATO.png", "IAGODA.png", "scoro.png", "KUSHA.png"]
+    max = 5
+if b == 7:
+    pict = ["NORMAL.png", "POTATO.png", "IAGODA.png", "scoro.png", "KUSHA.png"]
+    max = 5
+if b == 8:
+    pict = ["NORMAL.png", "POTATO.png", "IAGODA.png", "scoro.png", "KUSHA.png"]
+    max = 5
+if b == 9:
+    pict = ["NORMAL.png", "POTATO.png", "IAGODA.png", "scoro.png", "KUSHA.png"]
     max = 5
 white = [255, 255, 255]
 black = [0, 0, 0]
@@ -49,7 +73,6 @@ def save():
     con = sqlite3.connect("levelcarts.db")
     cur = con.cursor()
     n = ">".join(w)
-    print(n)
     cur.execute("UPDATE cartslevels SET carts = ? WHERE name = ?", (n, i), ).fetchall()
     con.commit()
     con.close()
@@ -76,7 +99,6 @@ class Carts(pygame.sprite.Sprite):
         self.o, self.o2 = 0, 0
 
     def update(self, args=[]):
-        print(args)
         if args and args[0].type == pygame.MOUSEBUTTONDOWN and self.rect.collidepoint(args[0].pos):
             if self.rect.y < 13:
                 list2([self.rect.x, self.rect.y], self.p)
@@ -86,8 +108,6 @@ class Carts(pygame.sprite.Sprite):
                 self.ug = args[1][0]
                 self.ug2 = self.rect.x, self.rect.y
                 list(self.p)
-            else:
-                print(4)
         if self.chek == 1:
             self.rect = self.rect.move((self.ug[0] - self.ug2[0]) // 10, -1 * self.ug2[1] // 10)
             self.o += 1

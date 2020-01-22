@@ -40,7 +40,24 @@ class Level2(QWidget):
         pixmap = QPixmap('fons/kj.jpg')
         if self.lvl == 1:
             pixmap2 = QPixmap('rust/potato.png')
-        pixmap3 = QPixmap('buttons/potato.png')
+        if self.lvl == 2:
+            pixmap2 = QPixmap('rust/holod.png')
+        if self.lvl == 3:
+            pixmap2 = QPixmap('rust/BOGCART.png')
+        if self.lvl == 4:
+            pixmap2 = QPixmap('rust/ship.png')
+        if self.lvl == 5:
+            pixmap2 = QPixmap('rust/scoro.png')
+        if self.lvl == 6:
+            pixmap2 = QPixmap('rust/holod2.png')
+        if self.lvl == 7:
+            pixmap2 = QPixmap('rust/KUSHA.png')
+        if self.lvl == 8:
+            pixmap2 = QPixmap('rust/potato.png')
+        if self.lvl == 9:
+            pixmap2 = QPixmap('rust/potato.png')
+        if self.lvl == 10:
+            pixmap2 = QPixmap('rust/pobeda.png')
         self.setWindowTitle(self.title)
         self.setGeometry(0, 0, pixmap.width(), pixmap.height())
         label2.move(250, 110)
@@ -76,14 +93,17 @@ class Level2(QWidget):
         return False
 
     def save(self):
-        con = sqlite3.connect("levelcarts.db")
-        cur = con.cursor()
-        cur.execute("UPDATE cartslevels SET level = ? WHERE name = ?", (self.lvl, self.name), ).fetchall()
-        con.commit()
-        con.close()
-        pygame.quit()
-        self.close()
-        os.system('python viborcarts.py')
+        if self.lvl != 10:
+            con = sqlite3.connect("levelcarts.db")
+            cur = con.cursor()
+            cur.execute("UPDATE cartslevels SET level = ? WHERE name = ?", (self.lvl + 1, self.name), ).fetchall()
+            con.commit()
+            con.close()
+            pygame.quit()
+            self.close()
+            os.system('python viborcarts.py')
+        else:
+            os.system('python mainmenu.py')
 
 
 if __name__ == '__main__':
