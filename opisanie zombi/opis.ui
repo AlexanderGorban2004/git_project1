@@ -19,7 +19,7 @@
      <x>-3</x>
      <y>-3</y>
      <width>1000</width>
-     <height>1000</height>
+     <height>900</height>
     </rect>
    </property>
    <property name="text">
@@ -82,9 +82,9 @@
    <property name="geometry">
     <rect>
      <x>180</x>
-     <y>-3</y>
+     <y>0</y>
      <width>650</width>
-     <height>90</height>
+     <height>80</height>
     </rect>
    </property>
    <property name="text">
@@ -195,6 +195,34 @@
     <string/>
    </property>
   </widget>
+  <widget class="QPushButton" name="fon3">
+   <property name="geometry">
+    <rect>
+     <x>14</x>
+     <y>142</y>
+     <width>521</width>
+     <height>361</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>fon</zorder>
+  <zorder>fon2</zorder>
+  <zorder>foto</zorder>
+  <zorder>opis</zorder>
+  <zorder>tekst</zorder>
+  <zorder>fon3</zorder>
+  <zorder>pushButton_01</zorder>
+  <zorder>pushButton_02</zorder>
+  <zorder>pushButton_03</zorder>
+  <zorder>pushButton_04</zorder>
+  <zorder>pushButton_05</zorder>
+  <zorder>pushButton_07</zorder>
+  <zorder>pushButton_06</zorder>
+  <zorder>vihod</zorder>
+  <zorder>pushButton_08</zorder>
  </widget>
  <resources/>
  <connections/>

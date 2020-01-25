@@ -31,7 +31,7 @@ class Ui_Form(object):
         self.vihod.setText("")
         self.vihod.setObjectName("vihod")
         self.tekst = QtWidgets.QPushButton(Form)
-        self.tekst.setGeometry(QtCore.QRect(180, -3, 650, 90))
+        self.tekst.setGeometry(QtCore.QRect(180, 0, 650, 80))
         self.tekst.setText("")
         self.tekst.setObjectName("tekst")
         self.pushButton_01 = QtWidgets.QPushButton(Form)
@@ -110,8 +110,14 @@ class MyWidget(QWidget, Ui_Form):
 
         self.fon2.setIconSize(QSize(1000, 1000))
         self.fon2.setIcon(QIcon('zombies/fon2.jpg'))
+        self.fon3.setIconSize(QSize(600, 600))
+        self.fon3.setIcon(QIcon('zombies/fon2.jpg'))
         self.fon.setIconSize(QSize(1600, 1600))
         self.fon.setIcon(QIcon('zombies/fon1.jpg'))
+        self.tekst.setIconSize(QSize(650, 80))
+        self.tekst.setIcon(QIcon('zombies/tekst.jpg'))
+        self.vihod.setIconSize(QSize(100, 30))
+        self.vihod.setIcon(QIcon('zombies/back.jpg'))
 
         self.opis.setIconSize(QSize(331, 241))
         self.opis.setIcon(QIcon('zombies/opisanie/none.jpg'))
